@@ -24,7 +24,7 @@
 <div class="jumbotron well">
     <h2><span class="label label-info">結果</span></h2>
     <div class="container">
-        <p id="result">{{$val}}</p>
+        <p id="result"></p>
     </div>
 </div>
 

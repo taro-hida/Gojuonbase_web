@@ -7,12 +7,16 @@ use Userlib\Gojuonbase;
 
 class PageController extends Controller
 {
-    public function show(Request $request)
+    public function show(\App\Http\Requests\PageRequest $request)
     {
         $name = $request->input('name');
-        $obj = new Gojuonbase\Gojuonbase($name);
-        $decimal = $obj->decimal();
+        if($name){
+            $obj = new Gojuonbase\Gojuonbase($name);
+            $decimal = $obj->decimal();
+            return view('show', [ 'val' => $decimal ]);
+        }else{
+            return view('form', [ 'val' => '' ]);
+        }
 
-        return view('show', [ 'val' => $decimal ]);
     }
 }
