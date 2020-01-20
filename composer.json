@@ -34,7 +34,7 @@
     "autoload": {
         "psr-4": {
             "App\\": "app/",
-            "Userlib\\": "/home/vagrant/Gojuon/app/user/lib/"
+            "Userlib\\": "app/user/lib/"
         },
         "classmap": [
             "database/seeds",
